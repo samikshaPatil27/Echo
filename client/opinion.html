@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Echo - Opinion</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="opinion">
+  <header class="site-header">
+    <h2>Echo! Let's see what people think!</h2>
+  </header>
+
+  <div class="container">
+    <h1 class="title">Opinion Poll</h1>
+
+    <textarea id="opinion-input" placeholder="What's your take?" aria-label="Opinion statement"></textarea>
+    <button id="submit-btn">Submit</button>
+
+    <div style="margin-top: 1rem;">
+      <label for="filter-select" style="margin-right: 0.5rem;">View:</label>
+      <select id="filter-select" class="filter-select">
+        <option value="latest">Latest</option>
+        <option value="trending">Trending</option>
+      </select>
+    </div>
+
+    <div id="poll-section"></div>
+
+    <div class="bottom-links">
+      <a href="index.html">Home</a>
+    </div>
+  </div>
+<footer class="site-footer">
+    <p>&copy; 2025 Echo • Opinions belongs to the indivisuals</p>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>

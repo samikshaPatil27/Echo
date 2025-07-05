@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
+  color: #f0f0f0;
+  display: flex;
+
+  flex-direction: column;   
+  align-items: center;      
+
+  justify-content: flex-start;   
+  min-height: 100vh;
+  padding: 2rem;
+}
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 720px;
+  background: #1e1e1e;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
+  animation: fade 0.6s ease;
+  flex: 1;
+}
+.site-header {
+  width: 100vw; 
+  position: sticky;
+  margin-bottom: 1rem;
+  background-color: antiquewhite;
+  color: rgb(128, 139, 34);
+  padding: 1rem 0;
+  text-align: center;
+  animation: headerColorCycle 8s infinite ease-in-out;
+}
+
+.title {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #d6ff66;
+}
+.subtitle {
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  width: 250px;
+  text-decoration: none;
+  color: #f0f0f0;
+  padding: 2rem;
+  border-radius: 14px;
+  background: #222;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+.card:hover {
+  background: #333;
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+.card h2 {
+  margin-bottom: 0.6rem;
+}
+
+textarea {
+  width: 100%;
+  min-height: 110px;
+  background: #2b2b2b;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1rem;
+  resize: vertical;
+  margin-bottom: 1rem;
+}
+button {
+  background: #66ffcc;
+  color: #000;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  background: #4ddbaf;
+  transform: translateY(-2px);
+}
+
+/* ----------- POLL ----------- */
+.response-box {
+  background: #222;
+  margin-top: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 80px;
+  animation: fade 0.5s ease;
+  border: 1px solid #2d2d2d;
+}
+.poll-section {
+  margin-top: 2rem;
+}
+.poll-question {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.poll-bar-container {
+  display: flex;
+  height: 24px;
+  background: #333;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.poll-bar {
+  height: 100%;
+  transition: width 0.5s ease;
+}
+.yes-bar {
+  background: #00cc99;
+  width: 0%;
+}
+.no-bar {
+  background: #ff4d4d;
+  width: 0%;
+}
+.poll-labels {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.8rem 0;
+  color: #ccc;
+}
+.poll-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.poll-buttons button {
+  margin: 0;
+}
+
+.bottom-links {
+  margin-top: 3rem;
+  text-align: center;
+  animation: fade 0.6s ease;
+}
+.bottom-links a {
+  margin: 0 10px;
+  color: #66ffcc;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+.bottom-links a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 4px #66ffcc;
+}
+
+.site-footer {
+  width: 100vw;
+  margin-top: 2rem;
+  text-align: center;
+  color: #555;
+  font-size: 0.8rem;
+  padding: 1rem 0;
+  background-color: #1e1e1e;
+}
+
+.filter-select{
+  background:#2b2b2b;color:#fff;border:none;border-radius:8px;padding:.4rem 1rem;
+  margin-bottom:1rem;font-size:.95rem
+}
+/* Opinion card style */
+.response-box{
+  background:#222;
+  border:1px solid #2d2d2d;
+  border-radius:12px;
+  padding:1rem;
+  margin-bottom:1rem;
+  animation:fade .5s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes headerColorCycle {
+  0% { background-color: #f5f5dc; }
+  50% { background-color: #e0dabf; }
+  100% { background-color: #f5f5dc; }
+}
+
+@media (max-width: 600px) {
+  body { padding: 1rem; }
+
+  .card {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+
+  .site-header,
+  .site-footer {
+    padding: 0.75rem 0;
+  }
+
+  .title       { font-size: 2rem; }
+  .section-title { font-size: 1.4rem; }
+}
